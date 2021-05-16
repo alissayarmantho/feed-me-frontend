@@ -5,13 +5,12 @@ h1 {
 }
 
 html, body, #root, #root>div {
-    height: 100%;
+    height: 100vh;
     margin: 0;
   }
 
 div {
     text-align: center;
-    margin: auto;
 }
 
 #searchbar {
@@ -38,6 +37,16 @@ div {
     color: #FFFFFF;
 }
 
+.back_button {
+    background-color: #000000;
+    border-radius: 15px;
+    border: 1px #000000 solid;
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 #page {
     position: relative; 
     height: 100vh;
@@ -47,4 +56,73 @@ div {
     justify-content: center;
     background-image: url('sharefood6.png');
     background-size: cover;
+}
+
+#results_table {
+    padding: 10px;
+}
+
+#result {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: #999999;
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    border: 2px solid #000000;
+    font-family: 'Helvetica';
+    margin: 5px;
+}
+
+.result_serialnumber{
+    display: grid;
+    border: 0px #000000 solid;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+
+}
+
+.result_main {
+    display: grid;
+    grid-template-rows: 1fr;
+    background: #FFFFFF;
+    width: 100%;
+    height: 50%;
+    border-radius: 0 15px 15px 0;
+}
+
+.result_maininfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 74px;
+    border: 1px #000000 solid;
+    border-radius: 0 15px 0 0;
+    background: snow;
+    
+
+}
+
+.maininfo_heading {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+}
+
+.maininfo_timing {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+}
+
+.result_moreinfo {
+    display:grid;
+    border: 1px solid #000000;
+    border-radius: 0 0 15px 0;
+    width: 100%;
+    height: 74px;
 }
