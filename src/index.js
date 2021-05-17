@@ -118,6 +118,7 @@ class Page2 extends React.Component {
     render() {
         return (
             <div id="resultarea">
+                <p>Location: {this.props.location}</p>
                 <ResultsTable results={this.state.results} />
                 <button class="back_button" onClick={this.props.onClick}>
                     BACK
@@ -140,17 +141,26 @@ class App extends React.Component {
         super(props);
         this.state = {
             onPage1 : true,
+            location: '',
         }
     }
 
     handleClick() {
         if (this.state.onPage1) {
-            this.setState({
-                onPage1: false,
-            })
+            if (document.getElementById('locationinsert').value.length === 0) {
+                document.getElementById('locationinsert').placeholder = 'NO LOCATION ENTERED!'
+                return
+            } else {
+                this.setState({
+                    onPage1: false,
+                    location: document.getElementById('locationinsert').value,
+                })
+            }
+            
         } else {
             this.setState({
                 onPage1: true,
+                location: null,
             });
         }
     }
@@ -167,7 +177,9 @@ class App extends React.Component {
                     <div id="page">
                         <Page2
                         results={test_one} 
-                        onClick={() => this.handleClick()}/>
+                        onClick={() => this.handleClick()}
+                        location={this.state.location}
+                        />
                     </div>
                 );
             }

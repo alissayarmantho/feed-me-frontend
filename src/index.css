@@ -89,6 +89,12 @@ div {
     margin: 0 0 20px 0;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0 5px #999999;
+}
+
+#locationsubmit:active {
+    transform: translateY(2px);
 }
 
 .back_button {
@@ -99,8 +105,13 @@ div {
     margin: 0 0 20px 0;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0 5px #999999;
 }
 
+#back_button:active {
+    transform: translateY(2px);
+}
 #page {
     position: relative; 
     height: 100vh;
@@ -116,6 +127,7 @@ div {
     display: grid;
     align-items: center;
     margin: auto;
+    font-family: 'Helvetica';
 }
 
 #results_table {
