@@ -68,8 +68,7 @@ class Result extends React.Component {
                         {this.props.heading}
                         </p>
                         <p className='maininfo_timing'>
-                        {"Timing:\n"}
-                        {this.props.timing}
+                        {"Timing:\n"} <br /><br /> {this.props.timing}
                         </p>
 
                     </div>
@@ -118,11 +117,11 @@ class Page2 extends React.Component {
     };
     render() {
         return (
-            <div id="page">
+            <div id="resultarea">
+                <ResultsTable results={this.state.results} />
                 <button class="back_button" onClick={this.props.onClick}>
                     BACK
                 </button>
-                <ResultsTable results={this.state.results} />
             </div>
         );
     }
