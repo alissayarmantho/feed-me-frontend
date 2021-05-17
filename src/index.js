@@ -2,6 +2,44 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+/*
+Format of the app below
+
+[Page 1]
+-- TitleName [the name of the website, put it as a component in case we wanna change name]
+-- SearchBar [the input text and submit button]
+-- Page 1 [combines both, along with "Not searching for food? Sign up to be our partner"]
+
+[Page 2]
+-- Map [commented out, haven't started work on the map yet]
+-- Result [the individual component representing important info regarding each food location]
+-- ResultsTable [shows 5 results at once]
+-- Page2 [shows location entered, resultsTable, and backbutton]
+
+[App]
+-- Switches between Page 1 and Page 2 based on handleClick() -> this is fired off whenever
+the submit button or back button is clicked
+
+*/
+
+///////////////
+// Constants //
+///////////////
+
+// this is placeholder info to fill up the resultsTable
+const test_one = [
+    {'heading':'KFC','timing':'9pm-11pm'},
+    {'heading':'A&W','timing':'10am-11am'},
+    {'heading':'Anandham','timing':'8pm-9pm'},
+    {'heading':'Sawadikap','timing':'9pm-11pm'},
+    {'heading':'Song Fa BKT','timing':'3pm-4pm'},
+]
+
+////////////
+// Page 1 //
+////////////
+
+// -- TitleName [the name of the website, put it as a component in case we wanna change name]
 class TitleName extends React.Component {
     render() {
         return (
@@ -12,6 +50,7 @@ class TitleName extends React.Component {
     }
 }
 
+// -- SearchBar [the input text and submit button]
 class SearchBar extends React.Component {
     render() {
         return (
@@ -28,6 +67,7 @@ class SearchBar extends React.Component {
     }
 }
 
+// -- Page 1 [combines both, along with "Not searching for food? Sign up to be our partner"]
 class Page1 extends React.Component {
     render() {
         return (
@@ -42,8 +82,11 @@ class Page1 extends React.Component {
     }
 }
 
-// Page 2
+////////////
+// Page 2 //
+////////////
 
+// -- Map [commented out, haven't started work on the map yet]
 // class Map extends React.Component {
 //     render() {
 //         return(
@@ -54,6 +97,7 @@ class Page1 extends React.Component {
 //     }
 // }
 
+// -- Result [the individual component representing important info regarding each food location]
 class Result extends React.Component {
     render() {
         return (
@@ -85,6 +129,7 @@ class Result extends React.Component {
     }
 }
 
+// -- ResultsTable [shows 5 results at once]
 class ResultsTable extends React.Component {
     renderResult(i) {
         return (
@@ -107,6 +152,7 @@ class ResultsTable extends React.Component {
     }
 }
 
+// -- Page2 [shows location entered, resultsTable, and backbutton]
 class Page2 extends React.Component {
     constructor(props) {
         super(props);
@@ -128,14 +174,8 @@ class Page2 extends React.Component {
     }
 }
 
-const test_one = [
-    {'heading':'KFC','timing':'9pm-11pm'},
-    {'heading':'A&W','timing':'10am-11am'},
-    {'heading':'Anandham','timing':'8pm-9pm'},
-    {'heading':'Sawadikap','timing':'9pm-11pm'},
-    {'heading':'Song Fa BKT','timing':'3pm-4pm'},
-]
-
+// -- Switches between Page 1 and Page 2 based on handleClick() -> this is fired off whenever
+// the submit button or back button is clicked
 class App extends React.Component {
     constructor(props) {
         super(props);

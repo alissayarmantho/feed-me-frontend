@@ -3,6 +3,33 @@
    License: none (public domain)
 */
 
+/*
+
+Contents:
+
+css-reset [reset browser css rules]
+h1
+html, body, #root, #root>div
+div
+#mainarea [on Page 1: contains TitleName, SearchBar, and "Not searching for ..."]
+#searchbar [on Page 1: SearchBar containing #locationinsert and #locationsubmit]
+#locationinsert [on Page 1: the input box to type in location]
+#locationsubmit & #locationsubmit:active [on Page 1: the submit button]
+.back_button & .backbutton:active [on Page 2: the back button]
+#page [on App: controls basic formatting for both pages, also contains background]
+#resultarea [on Page 2: contains Location,resultstable, back button]
+#resultstable [on Page 2: contains 5 results]
+#result [on Page 2: contains all result and maininfo classes listed below]
+    .result_serialnumber [style of result serial number]
+    .result_main [style of result main containing maininfo and moreinfo]
+    .result_maininfo [contains heading and timing]
+    .maininfo_heading [the heading]
+    .maininfo_timing [the timing]
+    .result_moreinfo [contains the words "moreinfo"]
+
+*/
+
+/* css-reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,6 +73,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 h1 {
     font-family: 'Arial';
@@ -109,7 +137,7 @@ div {
     box-shadow: 0 5px #999999;
 }
 
-#back_button:active {
+.back_button:active {
     transform: translateY(2px);
 }
 #page {
