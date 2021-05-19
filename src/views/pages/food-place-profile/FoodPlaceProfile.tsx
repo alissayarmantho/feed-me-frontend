@@ -6,14 +6,16 @@ import "./FoodPlaceProfile.scss";
 const FoodPlaceProfile: React.FC = () => {
   const handleClick = () => console.log("Hello World");
   return (
-    <Button
-      type="button"
-      className={classnames("btn btn-outline-secondary btn-svg", "delete")}
-      aria-label="button"
-      onClick={handleClick}
-    >
-      <X className="X" />
-    </Button>
+    <div>
+      <Button
+        type="button"
+        className={classnames("btn btn-outline-secondary btn-svg", "delete")}
+        aria-label="button"
+        onClick={handleClick}
+      >
+        <X className="X" />
+      </Button>
+    </div>
   );
 };
 
