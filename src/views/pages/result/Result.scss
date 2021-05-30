@@ -9,6 +9,7 @@
 .mapWrapper {
   flex: 3;
   position: -webkit-sticky; /* Safari */
+  height: 100%;
   position: sticky;
   top: 0;
   left: 0;
@@ -33,6 +34,10 @@
 
 .resultListWrapper::-webkit-scrollbar {
   display: none;
+}
+
+.lineBreak {
+  width: 85%;
 }
 
 @include media-breakpoint-down(lg) {
