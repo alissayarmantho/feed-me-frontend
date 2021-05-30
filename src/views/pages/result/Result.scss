@@ -17,8 +17,8 @@
 
 .return {
   position: fixed;
-  top: 100px;
-  left: 18rem;
+  top: 102px;
+  left: 16.5rem;
   padding: 0.5rem;
   background: black;
   color: white;
@@ -85,5 +85,9 @@
     border: black;
     border-style: solid;
     border-width: thin;
+  }
+
+  .return {
+    left: 18rem;
   }
 }
