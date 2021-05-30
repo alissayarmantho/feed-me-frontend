@@ -6,6 +6,8 @@ import "./Result.scss";
 
 const Result: React.FC = () => {
   const [searchPlace, setSearchPlace] = useState<string>("");
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleClick = () => console.log("Hello World");
   var date = new Date();
   return (

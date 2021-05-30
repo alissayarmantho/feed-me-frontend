@@ -7,6 +7,8 @@ import "./Home.scss";
 
 const Home: React.FC = () => {
   const [searchPlace, setSearchPlace] = useState<string>("");
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isSearching, setIsSearching] = useState<boolean>(false);
   const handleSearch = () => history.push(`/result/${searchPlace}`);
   const history = useHistory();
