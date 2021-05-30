@@ -32,7 +32,8 @@ const FoodPlaceCard: React.FC<Props> = ({
         </div>
         <div>{foodTypes.join(" • ")}</div>
         <div>
-          {servingTime[0].toLocaleTimeString().slice(0, -3) +
+          {"Serving time : " +
+            servingTime[0].toLocaleTimeString().slice(0, -3) +
             " - " +
             servingTime[1].toLocaleTimeString().slice(0, -3)}
         </div>
