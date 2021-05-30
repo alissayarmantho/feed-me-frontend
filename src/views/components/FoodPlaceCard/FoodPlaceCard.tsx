@@ -1,7 +1,6 @@
-import Button from "react-bootstrap/Button";
-import classnames from "classnames";
-import { X } from "react-feather";
+import CustomButton from "../CustomButton/CustomButton";
 import Rating from "../Rating/Rating";
+import ImageCaroussel from "../ImageCaroussel/ImageCaroussel";
 import "./FoodPlaceCard.scss";
 
 type Props = {
@@ -24,15 +23,23 @@ const FoodPlaceCard: React.FC<Props> = ({
   const handleClick = () => console.log("Hello World");
   return (
     <div className="container">
-      <Rating ratingValue={rating}></Rating>
-      <Button
-        type="button"
-        className={classnames("btn btn-outline-secondary btn-svg", "delete")}
-        aria-label="button"
+      <ImageCaroussel imageArray={imageArray} />
+      <div>{title}</div>
+      <div className="locationAndRating">
+        <div className="location">{location + " • "}</div>
+        <Rating ratingValue={rating}></Rating>
+      </div>
+      <div>{foodTypes.join(" • ")}</div>
+      <div>
+        {servingTime[0].toLocaleTimeString() +
+          " - " +
+          servingTime[1].toLocaleTimeString()}
+      </div>
+      <CustomButton
+        label="reserve-button"
         onClick={handleClick}
-      >
-        <X className="X" />
-      </Button>
+        content="Reserve My Spot"
+      ></CustomButton>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+@import "../../../../styles/custom.scss";
+
+.container {
+  width: inherit;
+}
+.locationAndRating {
+  display: flex;
+}
+.location {
+  padding-right: 0.2rem;
+}
+
+@include media-breakpoint-down(lg) {
+}
