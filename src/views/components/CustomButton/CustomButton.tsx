@@ -12,7 +12,7 @@ const CustomButton: React.FC<Props> = ({ label, onClick, content }) => {
   return (
     <Button
       type="button"
-      className={classnames("btn btn-dark btn-lg shadow-none", "searchButton")}
+      className={classnames("btn btn-dark btn-lg shadow-none", "customButton")}
       aria-label={label}
       onClick={onClick}
     >
