@@ -13,41 +13,16 @@
   align-items: center;
   justify-content: center;
   h1 {
-    font-weight: bold;
+    font-weight: 100 !important;
     font-size: 4rem;
     text-shadow: 0 0 2pt white;
   }
-}
-
-.searchBox {
-  outline-style: none;
-  border-radius: 2rem;
-  border-style: none;
-  font-size: large;
-  text-align: center;
-  padding: 0.5rem;
-}
-
-.searchBox:focus,
-.searchBox:hover {
-  box-shadow: 0 0 5pt 0.5pt #d3d3d3;
-}
-
-.searchButton {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 2rem;
-  border-radius: 2rem;
-  font-weight: bold;
-}
-.searchButton:hover,
-.searchButton:focus {
-  box-shadow: 0 0 2pt black !important;
 }
 .signInLink,
 .signInLink:hover,
 .signInLink:focus {
   color: black;
   text-shadow: 0 0 5pt white;
+  font-weight: 100 !important;
   font-size: medium;
 }

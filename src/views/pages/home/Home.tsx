@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import classnames from "classnames";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import SearchBox from "../../components/SearchBox/SearchBox";
 import "./Home.scss";
 
 const Home: React.FC = () => {
@@ -13,28 +14,18 @@ const Home: React.FC = () => {
   return (
     <div className="pageContainer">
       <h1>Feed Me</h1>
-      <div className="search">
-        <input
-          type="text"
-          className="searchBox"
-          value={searchPlace}
-          placeholder="Type your location here"
-          onChange={(e) => setSearchPlace(e.target.value)}
-          disabled={isSearching}
-          onKeyPress={onKeyPress}
-        ></input>
-      </div>
-      <Button
-        type="button"
-        className={classnames(
-          "btn btn-dark btn-lg shadow-none",
-          "searchButton"
-        )}
-        aria-label="search-button"
+      <SearchBox
+        value={searchPlace}
+        placeholder="Type your location here"
+        onChange={(e) => setSearchPlace(e.target.value)}
+        disabled={isSearching}
+        onKeyPress={onKeyPress}
+      ></SearchBox>
+      <CustomButton
+        label="search-button"
         onClick={handleSearch}
-      >
-        Find Me Food
-      </Button>
+        content="Find Me Food"
+      ></CustomButton>
       <Link
         to="/login"
         className={classnames("btn btn-link shadow-none", "signInLink")}
