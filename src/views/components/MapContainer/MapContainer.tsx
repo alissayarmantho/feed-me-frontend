@@ -1,3 +1,4 @@
+import React from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 const MapContainer: React.FC = () => {
@@ -12,7 +13,9 @@ const MapContainer: React.FC = () => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="">
+    <LoadScript
+      googleMapsApiKey={process.env?.REACT_APP_GOOGLE_MAPS_API_KEY || ""}
+    >
       <GoogleMap
         mapContainerStyle={mapStyles}
         zoom={13}
