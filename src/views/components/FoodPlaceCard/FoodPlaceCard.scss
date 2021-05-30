@@ -2,13 +2,25 @@
 
 .container {
   width: inherit;
+  padding: 0;
+  margin: 0;
 }
+
 .locationAndRating {
   display: flex;
 }
+
 .location {
   padding-right: 0.2rem;
 }
 
+.information {
+  padding-left: 0.5rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 @include media-breakpoint-down(lg) {
 }

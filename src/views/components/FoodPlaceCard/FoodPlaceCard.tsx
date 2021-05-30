@@ -24,16 +24,18 @@ const FoodPlaceCard: React.FC<Props> = ({
   return (
     <div className="container">
       <ImageCaroussel imageArray={imageArray} />
-      <div>{title}</div>
-      <div className="locationAndRating">
-        <div className="location">{location + " • "}</div>
-        <Rating ratingValue={rating}></Rating>
-      </div>
-      <div>{foodTypes.join(" • ")}</div>
-      <div>
-        {servingTime[0].toLocaleTimeString() +
-          " - " +
-          servingTime[1].toLocaleTimeString()}
+      <div className="information">
+        <div className="title">{title}</div>
+        <div className="locationAndRating">
+          <div className="location">{location + " • "}</div>
+          <Rating ratingValue={rating}></Rating>
+        </div>
+        <div>{foodTypes.join(" • ")}</div>
+        <div>
+          {servingTime[0].toLocaleTimeString().slice(0, -3) +
+            " - " +
+            servingTime[1].toLocaleTimeString().slice(0, -3)}
+        </div>
       </div>
       <CustomButton
         label="reserve-button"

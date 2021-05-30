@@ -4,13 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding: 0.5rem !important;
 }
 
 .imageContainer {
   display: flex;
   grid-column-gap: 1rem;
   grid-auto-flow: row;
-  padding: 1rem;
+  padding: 1rem 0rem;
   overflow-x: auto;
 }
 
