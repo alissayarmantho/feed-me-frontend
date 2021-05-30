@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FoodPlaceCard from "../../components/FoodPlaceCard/FoodPlaceCard";
 import MapContainer from "../../components/MapContainer/MapContainer";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import { Search, ChevronLeft } from "react-feather";
 import "./Result.scss";
 
 var date = new Date();
@@ -80,9 +81,9 @@ const fillerValues = [
 
 const Result: React.FC = () => {
   const [searchPlace, setSearchPlace] = useState<string>("");
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleClick = () => console.log("Hello World");
+  const handleClick = () => setIsOpen(!isOpen);
 
   return (
     <div className="mainContainer">
@@ -90,13 +91,22 @@ const Result: React.FC = () => {
         <MapContainer />
       </div>
       <div className="resultListWrapper">
-        <div className="searchPlace">
-          <SearchBox
-            value={searchPlace}
-            placeholder="Type your location here"
-            onChange={(e) => setSearchPlace(e.target.value)}
-          />
-        </div>
+        {isOpen ? (
+          <div className="searchPlaceBox">
+            <div className="return" onClick={handleClick}>
+              <ChevronLeft />
+            </div>
+            <SearchBox
+              value={searchPlace}
+              placeholder="Type your location here"
+              onChange={(e) => setSearchPlace(e.target.value)}
+            />
+          </div>
+        ) : (
+          <div className="search" onClick={handleClick}>
+            <Search />
+          </div>
+        )}
         {fillerValues.map((value, index) => (
           <div key={index}>
             <FoodPlaceCard
@@ -106,7 +116,6 @@ const Result: React.FC = () => {
               rating={value.rating}
               foodTypes={value.foodTypes}
               servingTime={value.servingTime}
-              key={index}
             ></FoodPlaceCard>
             {index !== fillerValues.length - 1 && <hr className="lineBreak" />}
           </div>
