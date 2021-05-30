@@ -2,9 +2,9 @@ import React from "react";
 import { Star } from "react-feather";
 import "./Rating.scss";
 
-interface Props {
+type Props = {
   ratingValue: number;
-}
+};
 
 const Rating: React.FC<Props> = ({ ratingValue }) => {
   return (
