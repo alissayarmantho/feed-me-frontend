@@ -1,0 +1,13 @@
+.searchButton {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 2rem !important;
+  width: fit-content;
+  align-self: center;
+  border-radius: 2rem !important;
+  font-weight: 100 !important;
+}
+.searchButton:hover,
+.searchButton:focus {
+  box-shadow: 0 0 2pt black !important;
+}
