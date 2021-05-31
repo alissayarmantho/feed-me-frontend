@@ -6,6 +6,7 @@ import { Search, ChevronLeft } from "react-feather";
 import "./Result.scss";
 
 var date = new Date();
+
 const fillerValues = [
   {
     imageArray: [
@@ -23,58 +24,44 @@ const fillerValues = [
   },
   {
     imageArray: [
-      "https://i.ibb.co/Jct7bBZ/kfc.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
+      "https://i.ibb.co/3pNQpkS/ntuc-fairprice.jpg",
+      "https://i.ibb.co/HzYCbv5/Shot-of-fully-stocked-isles-in-a-grocery-store-during-the-day.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
     ],
-    title: "KFC",
+    title: "NTUC Fairprice",
     location: "Buona Vista",
     rating: 5,
-    foodTypes: ["Fast Food", "Fried Chicken"],
+    foodTypes: ["Supermarket", "Groceries"],
     servingTime: [date, date],
   },
   {
     imageArray: [
-      "https://i.ibb.co/Jct7bBZ/kfc.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
+      "https://i.ibb.co/q5KLhRK/sats.png",
+      "https://i.ibb.co/K0F3FKM/catering.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
     ],
-    title: "KFC",
-    location: "Buona Vista",
+    title: "SATS",
+    location: "Clementi",
     rating: 5,
-    foodTypes: ["Fast Food", "Fried Chicken"],
+    foodTypes: ["Catering", "Military Food"],
     servingTime: [date, date],
   },
   {
     imageArray: [
-      "https://i.ibb.co/Jct7bBZ/kfc.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
-    ],
-    title: "KFC",
-    location: "Buona Vista",
-    rating: 5,
-    foodTypes: ["Fast Food", "Fried Chicken"],
-    servingTime: [date, date],
-  },
-  {
-    imageArray: [
-      "https://i.ibb.co/Jct7bBZ/kfc.jpg",
-      "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
+      "https://i.ibb.co/KKy28gy/giant.png",
+      "https://i.ibb.co/HzYCbv5/Shot-of-fully-stocked-isles-in-a-grocery-store-during-the-day.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
       "https://i.ibb.co/0Y3BNm9/kfc2.jpg",
     ],
-    title: "KFC",
-    location: "Buona Vista",
+    title: "Giant",
+    location: "Jurong East",
     rating: 5,
-    foodTypes: ["Fast Food", "Fried Chicken"],
+    foodTypes: ["Supermarket", "Groceries"],
     servingTime: [date, date],
   },
 ];
